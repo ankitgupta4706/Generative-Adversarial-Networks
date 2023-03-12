@@ -1,6 +1,5 @@
 # Generative Adversarial Networks - Training and Observations
 
-[Sample_video.mp4](Sample_video.mp4)
 
 `Set Up`
 
