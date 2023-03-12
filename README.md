@@ -1,5 +1,9 @@
 # Generative Adversarial Networks - Training and Observations
 
+
+https://user-images.githubusercontent.com/81372735/224534881-5e13df52-8208-4102-b13d-8f8a910628d3.mp4
+
+
 `Set Up`
 
 -Run the .ipynb file and explore the GAN domain!
