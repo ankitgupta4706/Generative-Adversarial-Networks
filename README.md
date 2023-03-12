@@ -14,11 +14,11 @@ https://user-images.githubusercontent.com/81372735/224534881-5e13df52-8208-4102-
 
 `Architecture of Generator and Discriminator`
 
-![Architecture.PNG](Architecture.PNG)
+<img width="706" alt="Architecture" src="https://user-images.githubusercontent.com/81372735/224536448-0d5d7ee5-ad6a-438c-93f9-a3b4c360c39d.PNG">
 
 `Accuracy & Losses`
 
-![Losses&Accuracy.PNG](Losses%26Accuracy.PNG)
+<img width="561" alt="Losses Accuracy" src="https://user-images.githubusercontent.com/81372735/224536493-14f3f665-03c3-4315-8295-8ad6e060a72f.PNG">
 
 `Observation`
 
@@ -30,24 +30,26 @@ Also, losses of both generator and discriminator revolves around, 0.6 suggesting
 
 *Learning Rate*
 
-![Learning Rate.PNG](Learning%20Rate.PNG)
+<img width="890" alt="Learning Rate" src="https://user-images.githubusercontent.com/81372735/224536521-c4c27c65-82a9-4b62-9d46-a55050a6470c.PNG">
+
 
 For learning rate = 2e-05, the generator never actually learns which means it becomes easy for the discriminator to identify fake samples, hence we can see that discriminator loss decreases to 0 and accuracy spikes up to 1 for discriminator. For learning rate = 0.002, model works fine initially but at the later phase it behaves absurd suggesting that this learning rate is quite high, and the model bounces around local minima. Learning rate = 0.0002 acts as the best learning rate. (For all this learning rate Adam optimizer is used).
 
 *Optimizer*
 
-![Optimizer.PNG](Optimizer.PNG)
+<img width="890" alt="Optimizer" src="https://user-images.githubusercontent.com/81372735/224536549-c72b581e-6f09-4614-a3ea-d447b0fe3cc5.PNG">
 
 As we know in general, Adam & RMSprop performs better than SGD, it is also evident in this model. The event which occurred in previous observation, happens in this as well i.e, when generator loss is high, discriminator’s loss is low and it’s accuracy is high. Also we can see that both RMSprop and Adam has a bit of similar performance in Gen. loss and Disc. Loss but the disc. Accuracy varies within a lesser bound than Adam’s suggesting that RMSprop optimizer yields stable results.
 
 `Traversing in Latent Space`
 
-![Traversing Latent Space.PNG](Traversing%20Latent%20Space.PNG)
+<img width="772" alt="Traversing Latent Space" src="https://user-images.githubusercontent.com/81372735/224536573-8692e67f-90cc-4aa4-bf2a-fa588cd5ab22.PNG">
 
 `Distribution of Generated Numbers`
 
 Trained a simple MNIST classifier with test accuracy of 99.07% and predicted outputs of 10,000 fake Generated Images.
 
-![Distribution.PNG](Distribution.PNG)
+<img width="777" alt="Distribution" src="https://user-images.githubusercontent.com/81372735/224536596-d42fbdb8-9601-4567-8454-7335ac1b6275.PNG">
+
 
 We can see that, model is producing more “9” digit and less “6” digit. It might have been possible that while training GAN model was not able to sufficiently distinguish this two digits.
